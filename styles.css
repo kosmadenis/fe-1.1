@@ -1,0 +1,274 @@
+@font-face {
+    font-family: "Barlow";
+    src: url("barlow/fonts/woff2/Barlow-Regular.woff2");
+}
+
+/* Стили для всего текста (наследуемые) */
+body {
+    font-family: "Barlow";
+    color: #2A4A5C;
+}
+
+/* Стили для всех кнопок */
+button {
+    border: none;
+}
+
+/* Стили для всех ссылок */
+a {
+    color: #3698FB;
+}
+
+/* Стили для всех подзаголовков */
+h3, h4 {
+    /* font-weight: normal; */
+    color: #7B8A92;
+}
+
+
+
+/* Стили для тела, которые не надо наследовать
+   (проще так, чем каждый проверять, наследуется ли?..) */
+.body {
+    margin: 0;
+    background-color: #EFF6FF;
+    padding: 50px;
+    display: flex;
+    justify-content: center;
+}
+
+/* Блок с контентом (картинка и форма) */
+.content {
+    background-color: #FFFFFF;
+    display: flex;
+    width: 100%;
+
+    /* На картинке вроде есть совсем чуть-чуть тени? */
+    box-shadow: 0 0 20px 0px #0000000f; 
+
+    /* Пока с такими ограничениями, потом надо решить вопрос переноса и т.д. */
+    max-width: 1440px;
+    min-width: 1150px;
+}
+
+/* Фоновая (боковая?) картинка */
+.bgimage {
+    width: 50%;
+    background-image: url("css-task/img/bg.jpg");
+}
+
+/* Логотип на фоновой картинке */
+.bgimage__logo {
+    height: 25px;
+    margin: 25px;
+}
+
+/* Форма регистрации (правая чать контента) */
+.form {
+    width: 50%;
+    padding: 90px 70px;
+    box-sizing: border-box;
+}
+
+
+
+/* Кнопки соцсетей, располагающиеся на одной строке
+   TODO: перенос кнопок на разные стороны, если не хватает места
+*/
+.social-list {
+    display: flex;
+    justify-content: space-between;
+    margin: 50px 0;
+}
+
+/* Сама кнопка соцсети */
+.social-button {
+    width: 45%;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+}
+
+/* Лого на кнопке соцсети */
+.social-button__logo {
+    width: 25px;
+    height: 25px;
+    margin-right: 15px;
+}
+
+/* Текст на кнопке соцсети */
+.social-button__text {
+    margin: 0;
+    color: #FFFFFF;
+}
+
+/* Кнопка FB */
+.social-button-fb {
+    background-color: #255A9B;
+}
+
+/* Кнопка IN */
+.social-button-in {
+    background-color: #0076B6;
+}
+
+
+
+/* Разделитель */
+.divider {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 50px 0;
+}
+
+/* Текст разделителя */
+.divider__text {
+    margin: 0 5px;
+}
+
+/* Линии разделителя, располагающиеся по бокам текста */
+.divider__line {
+    height: 1px;
+    width: 20%;
+    background-color: #ececec;
+}
+
+
+
+
+/* Текстовые инпуты, располагающиеся на одной строке
+   TODO: перенос кнопок на разные стороны, если не хватает места */
+.textinput-list {
+    display: flex;
+    justify-content: space-between;
+    margin: 50px 0;
+}
+
+/* Контейнер + заголовок текстового инпута */
+.textinput {
+    width: 45%;
+    border: 1px solid #ececec;
+    padding: 5px;
+    display: block;
+    margin-bottom: 3px;
+    color: #7B8A92;
+    font-size: 11pt;
+}
+
+/* Подсветка синим левой части рамки если инпут в фокусе */
+.textinput:focus-within {
+    border-left: 1px solid #3698FB;
+}
+/* Подсветка синим левой части рамки если текст валидный - не везде работает
+.textinput:has(> .textinput__input:valid) {
+    border-left: 1px solid #3698FB;
+} */
+
+/* Поле ввода текстового инпута */
+.textinput__input {
+    display: block;
+    width: 100%;
+    border: none;
+    outline: none;
+    padding: 0px 0px 0px 1px;
+    font-size: 11pt;
+}
+
+
+
+/* Радио-кнопки, располагающиеся на одной строке
+   TODO: перенос кнопок на разные стороны, если не хватает места */
+.invtype-list {
+    margin: 50px 0 25px 0;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+/* Радио-кнопка с текстом и значком "инфо" */
+.invtype {
+    height: 20px;
+    display: flex;
+}
+
+/* Сама радио-кнопка */
+.invtype__input {
+    appearance: none;
+    height: 100%;
+    aspect-ratio: 1;
+    margin: 0;
+    border-radius: 50%;
+    border: 2px solid #e1e1e1;
+}
+
+/* Выбранная радио-кнопка */
+.invtype__input:checked {
+    border: 5px solid #3698FB;
+}
+
+/* Текст радио-кнопки */
+.invtype__text {
+    margin: 0 5px;
+    /* font-weight: bold; */
+    color: #3b3b3b;
+}
+
+/* Значок "инфо" после текста */
+.invtype__info {
+    font-size: small;
+    color: #e1e1e1;
+}
+
+
+
+/* Пояснение о выбранном варианте */
+.tooltip {
+    margin: 25px 0 50px 0;
+    width: 50%;
+    box-sizing: border-box;
+    padding: 10px;
+    box-shadow: 0 0 20px 0px #0000001f;
+    color: #7B8A92;
+}
+
+
+
+/* Чекбокс с текстом */
+.agreement {
+    margin: 50px 0;
+    display: flex;
+    align-items: center;
+}
+
+/* Сам чекбокс */
+.agreement__input {
+    appearance: none;
+    margin: 0;
+    width: 15px;
+    height: 15px;
+    border: 1px solid #dbdbdb;
+}
+
+/* Выбранный чекбокс */
+.agreement__input:checked {
+    background-color: #3698FB;
+    border: none;
+}
+
+/* Текст чекбокса */
+.agreement__text {
+    margin: 0 0 0 10px;
+    color: #7B8A92;
+}
+
+
+
+/* Большая (главная) кнопка */
+.submit {
+    height: 40px;
+    width: 50%;
+    border-radius: 5px;
+    background-color: #3698FB;
+    color: #FFFFFF;
+    font-weight: bold;
+}
