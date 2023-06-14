@@ -35,8 +35,8 @@ body {
   justify-content: center;
 }
 
-/* Блок с контентом (картинка и форма) */
-.content {
+/* Основной блок по середине (картинка и форма) */
+.main {
   background-color: #ffffff;
   display: flex;
   width: 100%;
@@ -49,7 +49,7 @@ body {
   min-width: 1150px;
 }
 
-/* Фоновая (боковая?) картинка */
+/* Фоновая картинка (левая часть основного блока) */
 .bgimage {
   width: 50%;
   background-image: url("assets/images/bg.jpg");
@@ -61,8 +61,8 @@ body {
   margin: 25px;
 }
 
-/* Форма регистрации (правая чать контента) */
-.form {
+/* Полезное содержимое (правая часть основного блока) */
+.content {
   width: 50%;
   padding: 90px 70px;
   box-sizing: border-box;

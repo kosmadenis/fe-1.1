@@ -6,11 +6,11 @@
   </head>
 
   <body class="body">
-    <div class="content">
+    <div class="main">
       <div class="bgimage">
         <img class="bgimage__logo" src="assets/images/logo.svg" />
       </div>
-      <div class="form">
+      <div class="content">
         <h1>Get iintoo it today</h1>
         <h3>There is no charge or obligation upon registration</h3>
         <div class="social-list">
@@ -36,62 +36,64 @@
           <p class="divider__text">OR</p>
           <div class="divider__line"></div>
         </div>
-        <div class="textinput-list">
-          <label class="textinput">
-            Email
-            <input
-              class="textinput__input"
-              type="email"
-              value="gus.goodwin@gmail.com"
-              required
-            />
+        <form class="signup">
+          <div class="textinput-list">
+            <label class="textinput">
+              Email
+              <input
+                class="textinput__input"
+                type="email"
+                value="gus.goodwin@gmail.com"
+                required
+              />
+            </label>
+            <label class="textinput">
+              Phone
+              <input class="textinput__input" type="tel" required />
+            </label>
+          </div>
+          <h2>What type of investor are you?</h2>
+          <h4>Select the type of investor you are below.</h4>
+          <div class="invtype-list">
+            <label class="invtype">
+              <input
+                class="invtype__input"
+                type="radio"
+                name="invtype"
+                checked="true"
+              />
+              <p class="invtype__text">Individual</p>
+              <div class="invtype__info">ⓘ</div>
+            </label>
+            <label class="invtype">
+              <input class="invtype__input" type="radio" name="invtype" />
+              <p class="invtype__text">Business</p>
+              <div class="invtype__info">ⓘ</div>
+            </label>
+            <label class="invtype">
+              <input class="invtype__input" type="radio" name="invtype" />
+              <p class="invtype__text">IRA</p>
+              <div class="invtype__info">ⓘ</div>
+            </label>
+            <label class="invtype">
+              <input class="invtype__input" type="radio" name="invtype" />
+              <p class="invtype__text">Trust</p>
+              <div class="invtype__info">ⓘ</div>
+            </label>
+          </div>
+          <div class="tooltip">
+            I am a natural person investing on my own behalf as a sole owner,
+            joint tenant, or tenant in common.
+          </div>
+          <label class="agreement">
+            <input class="agreement__input" type="checkbox" required />
+            <p class="agreement__text">
+              I agree to the terms and receiving notifications from iintoo
+              <a href="#">View full terms</a>
+            </p>
           </label>
-          <label class="textinput">
-            Phone
-            <input class="textinput__input" type="tel" required />
-          </label>
-        </div>
-        <h2>What type of investor are you?</h2>
-        <h4>Select the type of investor you are below.</h4>
-        <div class="invtype-list">
-          <label class="invtype">
-            <input
-              class="invtype__input"
-              type="radio"
-              name="invtype"
-              checked="true"
-            />
-            <p class="invtype__text">Individual</p>
-            <div class="invtype__info">ⓘ</div>
-          </label>
-          <label class="invtype">
-            <input class="invtype__input" type="radio" name="invtype" />
-            <p class="invtype__text">Business</p>
-            <div class="invtype__info">ⓘ</div>
-          </label>
-          <label class="invtype">
-            <input class="invtype__input" type="radio" name="invtype" />
-            <p class="invtype__text">IRA</p>
-            <div class="invtype__info">ⓘ</div>
-          </label>
-          <label class="invtype">
-            <input class="invtype__input" type="radio" name="invtype" />
-            <p class="invtype__text">Trust</p>
-            <div class="invtype__info">ⓘ</div>
-          </label>
-        </div>
-        <div class="tooltip">
-          I am a natural person investing on my own behalf as a sole owner,
-          joint tenant, or tenant in common.
-        </div>
-        <label class="agreement">
-          <input class="agreement__input" type="checkbox" />
-          <p class="agreement__text">
-            I agree to the terms and receiving notifications from iintoo
-            <a href="#">View full terms</a>
-          </p>
-        </label>
-        <button class="submit">Create Account</button>
+          <button type="submit" class="submit">Create Account</button>
+        </form>
       </div>
     </div>
   </body>
