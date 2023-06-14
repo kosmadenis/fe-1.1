@@ -1,6 +1,6 @@
 @font-face {
     font-family: "Barlow";
-    src: url("barlow/fonts/woff2/Barlow-Regular.woff2");
+    src: url("assets/fonts/Barlow-Regular.woff");
 }
 
 /* Стили для всего текста (наследуемые) */
@@ -54,7 +54,7 @@ h3, h4 {
 /* Фоновая (боковая?) картинка */
 .bgimage {
     width: 50%;
-    background-image: url("css-task/img/bg.jpg");
+    background-image: url("assets/images/bg.jpg");
 }
 
 /* Логотип на фоновой картинке */
