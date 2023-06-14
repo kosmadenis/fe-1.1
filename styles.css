@@ -99,12 +99,12 @@ body {
 }
 
 /* Кнопка FB */
-.social-button-fb {
+.social-button--fb {
   background-color: #255a9b;
 }
 
 /* Кнопка IN */
-.social-button-in {
+.social-button--in {
   background-color: #0076b6;
 }
 
